@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Sitio con Responsive Design en HTML5 y CSS3 y Jquery</title>
+		<meta charset="utf-8"/>
+		<meta name="description" content="Bienvenido a mi portafolio web hecho en HTML5, CSS3 y JQuery con Responsive Web Design"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1"/>
+		<!--el ancho de la página se verá conforme el ancho del dispositivo que se esta viendo, y la escala inicial será a uno-->
+		<!--posicion horizonal portraid y posición vertiical landscape-->
+		<!--tamaño para icono es 16px-16px y resolución 72px, color de lienzo transparente-->
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+		<link rel="autor" type="text/plain" href="humans.txt"/>
+		<!--Antes de la hoja de estilos en cascada poner lo referente a los plugin-->
+		<link rel="stylesheet" href="css/flexslider.css"/>
+		<link rel="stylesheet" href="css/estilos.css"/>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script>
+			!window.JQuery && document.write("<script src='js/jquery.min.js'><\/script>");
+		</script>
+
+
+		<script src="js/jquery.flexslider.js"/></script>
+		<script>
+			
+    $(function(){
+      SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  		
+		</script>
+		<!--[if lt IE 9]>
+			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+			
+	</head>
+	<body>
+		<header>
+			<h1>
+				<a href="index.html">
+					<img class="fade" alt="Bextlan.com Lugar de bits, vectores y pixeles." src="img/logo.png"/>
+				</a>	
+			</h1>
+			<nav>
+				<ul>
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="acerca.html">Acerca</a></li>
+					<li><a href="servicios.html">Servicios</a></li>
+					<li><a href="trabajos.html">Trabajos</a></li>
+					<li><a href="contacto.html">Contacto</a></li>
+					<!-- <li> es list item -->
+				</ul>
+			</nav>
+		</header>
+			<article id="descripcion-acerca">
+				<h2><center>Misi&oacute;n</center></h2>
+				<p>
+					<center>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos.</center>
+				</p>
+				<h2><center>Visi&oacute;n</center></h2>
+				<p>
+					<center>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos.</center>
+				</p>
+			</article>
+			<article id="multimedia-acerca">
+				<figure id="img-acerca">
+					<center><img src="img/slide-1.jpg">
+					<figcaption>He visto el futuro, est&aacute; en mi navegador</figcaption>
+					</center>
+				</figure>
+				<div>
+					<iframe width="560" height="315" src="//www.youtube.com/embed/On1CH4pbWHk" frameborder="0" allowfullscreen></iframe>
+				</div>
+				
+				
+			</article>
+			
+			
+		
+		</section>
+		<footer>
+			Aprendiendo HTML5, CSS3, JQuery y Responsive Web Design con <a rel="autor" href="http://twitter.com/jaad3009" target="_blank">@jaad3009</a>
+			<!--El target="_blank" nos permite abrir el vínculo de twitter en otra ventana"-->
+		</footer>
+		
+		
+	</body>
+</html>

@@ -1,0 +1,267 @@
+/*reseto universal de los tres elementos del modelo de caja a cero*/
+*{
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+article,figcaption,figure,footer,header,hgroup,nav,section{
+	display: block;
+}
+/*estilos del sitio*/
+
+@font-face{
+	font-family: "kaushanscript-regular-webfont";
+	src: url("../fonts/kaushanscript-regular-webfont.eot");
+	src: url("../fonts/kaushanscript-regular-webfont.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/kaushanscript-regular-webfont.woff") format("woff"),
+		url("../fonts/kaushanscript-regular-webfont.ttf") format("truetype"),
+		url("../fonts/kaushanscript-regular-webfont.svg#kaushan_scriptregular") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face { 
+	font-family: "dobkinplain";
+	src: url("../fonts/dobkinplain-webfont.eot");
+	src: url("../fonts/dobkinplain-webfont.eot?#iefix") format("embedded-opentype"),         
+		url("../fonts/dobkinplain-webfont.woff") format("woff"),
+		url("../fonts/dobkinplain-webfont.ttf") format("truetype"),         
+		url("../fonts/dobkinplain-webfont.svg#dobkinplain") format("svg");    
+	font-weight: normal;    
+	font-style: normal;
+
+}
+
+body{
+	background: #212121 url(../img/fondo.jpg);
+	color: #FFF;
+	font-family: "kaushanscript-regular-webfont", Helvetica, Verdana;
+	font-size: 1em;
+}
+a{
+	color: #57ABB8;
+	font-weight: bold; 
+	/*Estilo de la tipografia es negrita: bold*/
+	text-decoration: none;
+	/*Se le quita la línea que viene por defecto al link*/
+}
+a:hover{
+/*Trabajar todos los enlaces que están en la página sobre el estado hover (cuando pasas el mouse sobre el link)*/
+	color: #F60;
+}
+figcaption{
+	font-size: 0.85em;
+	padding: 0.25em;
+	text-align: center;
+
+}
+
+img,video{
+	max-width: 100%;
+	/*Flexibilidad en objetos e imágenes es con anchura máxima*/
+}
+
+header, section#contenido, footer{
+	background: #FFF url(../img/fondo-interno.jpg);
+	margin: 0 auto;
+	/*auto centra el contenido en la página*/
+	max-width: 90%;
+	text-align: center;
+}
+
+header h1, nav{
+	display: inline-block;
+	max-width: 100%;
+	vertical-align: middle;
+	/*el display inline block para que convivan a la misma altura, el 100% es el 90% del header padre*/
+	/*Así mismo, el middle significa a la mitad del objeto que comparte el ancho, si es top va en la parte superior*/
+}
+
+header h1{
+	padding: 0.2em;
+}
+
+nav ul{
+	list-style: none;
+	
+}
+nav li{
+	display: inline-block;
+	padding: 0.1em;
+	vertical-align: top;
+}
+
+nav a{
+	background: #FFF;
+	border: 0.1em solid #57ABB8;
+	border-radius: 0.25em;
+	color: #F60;
+	display: block;
+	font-family: "dobkinplain", Helvetica, Verdana;
+	font-size: 1.4em;
+	padding: 0.2em;	
+	-ms-transition: all 0.5s ease-in;
+	/*para que interprete bien el internet explore*/
+	-moz-transition: all 0.5s ease-in;
+	/*mozilla*/
+	-o-transition: all 0.5s ease-in;
+	/*opera*/
+	-webkit-transition: all 0.5s ease-in;
+	/*chrome y safari*/
+	transition: all 0.5s ease-in;
+	/*el in es al iniciar pasando el mouse, un out es al salir el mouse*/
+	/*all todos las transition, 0.5s medio segundo*/
+	/*estilos de transition necesitan 3 atributos: color, movimiento eje y o X, forma*/
+	/*border-radius y transition aun no son estándares, son etiquetas nuevas*/
+}
+nav a:hover{
+	background: #212121;
+	border: 0.1em dashed #F60;
+	/*el efecto dashed es punteado en los border*/
+	border-radius: 0 0.5em 0 0.5em;
+	/*las esquinas tiene su numeracion superior izquierda(1), luego superior derecha, abajo derecho y abajo izquierda*/
+	color: #FFF;
+	-ms-transition: all 0.5s ease-out;
+	/*para que interprete bien el internet explore*/
+	-moz-transition: all 0.5s ease-out;
+	/*mozilla*/
+	-o-transition: all 0.5s ease-out;
+	/*opera*/
+	-webkit-transition: all 0.5s ease-out;
+	/*chrome y safari*/
+	transition: all 0.5s ease-out;
+	
+}
+section#principal, aside{
+	background: #1E6381;
+	border-radius: 0.5em;
+	display: inline-block;
+	margin: 0 auto;
+	max-width: 100%;
+	padding: 0.25em;
+	vertical-align: top;
+	width: 65%;
+}
+article#galeria-inicio{
+	border-radius: 0.5em;
+	margin: 0.5em;
+	padding: 0.5em;
+	padding: 0.5em;
+	text-align: left;
+	width: 95%;
+	/*el 95% es respecto al section padre 95% del 65%*/
+
+}
+
+
+aside{
+	width: 30%;
+}
+
+aside img{
+	border-radius: 0.5em;
+}
+
+footer{
+	color: #000;
+	font-size: 0.85em;
+	padding: 0.75em 0;
+	/*padding arriba y abajo de 0.75em y a los lados de 0em*/
+}
+
+/*ya definimos id y estructura semática ahora toca clases*/
+
+.fade{
+	-ms-transition: all 0.5s ease-in;
+	/*para que interprete bien el internet explore*/
+	-moz-transition: all 0.5s ease-in;
+	/*mozilla*/
+	-o-transition: all 0.5s ease-in;
+	/*opera*/
+	-webkit-transition: all 0.5s ease-in;
+	/*chrome y safari*/
+	
+	opacity: 1;
+	filter:alpha(opacity=10);
+	/*opacidad 1=100%*/
+	/*el filter es para que internet explore lo pueda interpretar*/
+	transition: all 0.5s ease-in;
+}
+
+.fade:hover{
+	-ms-transition: all 0.5s ease-out;
+	/*para que interprete bien el internet explore*/
+	-moz-transition: all 0.5s ease-out;
+	/*mozilla*/
+	-o-transition: all 0.5s ease-out;
+	/*opera*/
+	-webkit-transition: all 0.5s ease-out;
+	/*chrome y safari*/
+	opacity: 0.7;
+	filter:alpha(opacity=7);
+	transition: all 0.5s ease-out;
+}
+
+/*una media JQuery es como una condicional en el CSS*/
+/*portrade: vertical*/
+
+@media(min-width:1081px){
+	/*cuando el ancho minimo sea de 1081px */
+	header h1{
+		text-align: left;
+		width: 35%;
+	}	
+	nav {
+		text-align: right;
+		width: 60%;
+	}
+
+}
+
+@media(max-width: 1080px){
+	nav li{
+		font-size: 1.3em;
+	}
+	article#galeria-inicio{
+		width: 90%;
+	}
+	aside{
+		width: 20%;
+	}
+	/*las letras aumentan un poco cuando se ajusta más la pantalla*/
+}
+
+@media(max-width: 800px){
+	nav li{
+		font-size: 0.95em;
+	}
+	article#galeria-inicio{
+		width: 88%;
+	}
+}
+
+@media(max-width: 600px){
+	nav li{
+		display: inline-block;
+		margin: 0px;
+		width:98%;
+	}
+	section#principal{
+		margin-bottom: 0.2em;
+	}
+	
+	section#principal, aside{
+		display: block;
+		width:95%;
+	
+	}
+}
+
+
+
+
+
+
+
+
